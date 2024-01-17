@@ -1,8 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Mini Blog with Next.js
+
+**Currently in Progress: Code Optimization and Remote MDX Integration.**
+
+## Overview
+
+This mini blog is my hobby project, a front-end endeavor created to explore and learn Next.js, a powerful React framework. It showcases my passion for front-end development and serves as a playground for experimenting with various technologies.
+
+## Tech Stack
+
+- **Next.js 14:** Utilizing the latest version of Next.js to build a modern and efficient web application.
+- **TypeScript & JavaScript:** Leveraging TypeScript for type safety and enhancing the development experience, alongside JavaScript for dynamic scripting.
+
+- **MDX (Markdown + JSX):** Writing blog posts using MDX, a format that combines the simplicity of Markdown with the flexibility of JSX, allowing for the seamless integration of React components.
+
+- **Tailwind CSS:** Implementing a custom and responsive design with the help of Tailwind CSS, ensuring a visually appealing and consistent layout.
+
+- **DaisyUI:** Incorporating DaisyUI components to enhance the user interface and user experience.
+
+- **Dark Mode:** Implementing a dark mode feature to offer users the option for a comfortable viewing experience in low-light environments.
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally and explore the code:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/your-mini-blog.git
+   cd your-mini-blog
+
+   ```
+
+2. **run the development server::**
 
 ```bash
 npm run dev
