@@ -33,7 +33,7 @@ export function Header() {
       <div className="navbar relative flex justify-between py-4 md:gap-1 lg:gap-2">
         <div className="flex-1">
           <a className="btn btn-ghost text-lg sm:text-2xl" href="/1">
-            코딩하는 엔지니어
+            반도체 지옥 탈출
           </a>
         </div>
         <div className="flex-none">
