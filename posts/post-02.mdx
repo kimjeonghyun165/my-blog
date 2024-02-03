@@ -1,12 +1,12 @@
 ---
-title: 인천대 반도체 공정 실습 보고서
+title: 인천대 반도체 공정 실습
 date: 2024-02-02
 description: TFT 소자 제작 실습 및 TCAD 툴을 이용한 PN Diode 값 측정
 category: 반도체
 image: https://i.namu.wiki/i/dRCvtORFRHnrZevUHrylGp7nSHffj7An-uZxC017VyzKScUT_9EPnhrIGlVr6uauelD1dRhRAtSjOkYRVKwpnw.webp
 ---
 
-## 이론과정
+## 이론
 
 ---
 
@@ -40,8 +40,8 @@ ndium Gallium Zinc Oxide Thin Film Transistor (IGZO TFT)는 특수한 소재로 
 
 **[소재 (IGZO)]**
 
-- IGZO는 인듐(In), 갈륨(Ga), 아연(Zn), 산소(O)로 이루어진 박막 소재입니다.
-- 해당 소재는 안정성이 뛰어나며, 고전자 이동도를 제공하여 전류의 효율적인 흐름을 가능케하는 장점이 있습니다.
+- IGZO는 인듐(In), 갈륨(Ga), 아연(Zn), 산소(O)로 이루어진 박막 소재
+- 해당 소재는 안정성이 뛰어나며, 고전자 이동도를 제공하여 전류의 효율적인 흐름을 가능케하는 장점이 있음
 
 **[제조 과정]**
 
@@ -50,15 +50,15 @@ ndium Gallium Zinc Oxide Thin Film Transistor (IGZO TFT)는 특수한 소재로 
 
 **[동작 원리]**
 
-- IGZO가 트렌지스터 구조에서 차지하는 영역을 Actice Layer로 정의.
-- Source와 Drain사이에 Channel을 생성해 전자를 이동시켜 전류를 발생.
-- 고전자 이동도와 안정된 특성은 빠른 반응 속도와 고해상도 디스플레이에 긍정적인 영향을 미침.
+- IGZO가 트렌지스터 구조에서 차지하는 영역을 Actice Layer로 정의
+- Source와 Drain사이에 Channel을 생성해 전자를 이동시켜 전류를 발생
+- 고전자 이동도와 안정된 특성은 빠른 반응 속도와 고해상도 디스플레이에 긍정적인 영향을 미침
 
 IGZO TFT는 고해상도 디스플레이뿐만 아니라 태양전지 패널, 전자종이 디바이스 등 다양한 분야에서 사용됩니다.
 특히, 디스플레이 분야에서는 고밀도 및 고해상도 디바이스에서 뛰어난 성능을 발휘합니다.
 IGZO TFT는 현대 전자 기기의 핵심 소자로서, 안정성과 고성능을 결합하여 다양한 응용 분야에서 중요한 역할을 수행하고 있습니다.
 
-## TFT 공정실습
+## IGZO TFT 공정실습
 
 ---
 
@@ -119,3 +119,31 @@ Metal(Ti/Cu) 증착 또한 gate metal 증착과정과 비슷하게 E-beam 증착
 최종적으로 사진과 같이 위 장비를 활용하여 정상적으로 작동하는지 확인합니다. 3개의 핀을 Gate, Source, Drain에 고정 시킨 후 정상적으로 동작하는지 확인합니다.
 
 ## TCAD 툴을 활용한 P-N 다이오드 모델링과 측정
+
+**[TCAD]**
+
+TCAD는 반도체 공정 및 장치 설계에 사용되는 소프트웨어 툴입니다.
+이전까지는 이론적인 식을 바탕으로 필요한 값들을 구했던 반면 이번 프로그램에서는 TCAD를 활용하여 직접 P-N 다이오드를 설계하고 측정해보는 시간을 가졌습니다.
+아래 코드는 p-type 및 n-type 도핑을 정의하는 부분으로 이번 시간에 conc 값을 수정하여 시뮬레이션을 진행할 계획입니다.
+
+```bash
+
+doping uniform p.type conc=5e15 x.min=0 x.max=10 y.min=0 y.max=2
+doping uniform n.type conc=1e16 x.min=0 x.max=10 y.min=2 y.max=4
+
+```
+
+**[Doping 설정]**
+
+![img](/posts/post-02/pnDiode.png)
+
+이론적인 공식에서의 Na와 Nb는 우리가 값을 수정하여 측정하는 파라미터로, 이번 프로그램에서는 Na 값을 10^12으로 고정시키고 Nb 값을 10^13 ~ 10^21 범위로, 그리고 Nb 값을 10^13으로 고정시키고 Na 값을 10^13 ~ 10^21 범위로 변화시키면서 측정을 진행했습니다.
+아래는 TCAD 툴에 입력한 코드와 시뮬레이션 결과를 보여주는 사진입니다.
+이번 실험을 통해 직접 손으로 계산한 이론값과 TCAD 시뮬레이션 값의 차이를 비교하고 분석하는 시간을 가졌습니다.
+
+![img](/posts/post-02/tcad.png)
+
+## 마무리
+
+이번에 진행한 TFT 소자 제작 실습과 TCAD 툴을 이용한 PN Diode 값 측정은 현대 반도체 기술에 대한 실질적이고 근본적인 경험이었습니다.
+실험을 통해 정기학기 때 배우지 못한 새로운 지식과 경험을 얻었고, TCAD를 통해 얻은 데이터를 토대로 정확한 PN Diode의 특성을 분석하는 데에 성공했습니다.
