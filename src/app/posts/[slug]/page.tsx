@@ -10,7 +10,9 @@ const mdxComponents: MDXComponents = {
 };
 
 export const generatedStaticParams = async () => {
-  allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
+  return allPosts.map((post) => ({
+    params: { slug: post._raw.flattenedPath },
+  }));
 };
 
 export const generatedMetadata = ({ params }: { params: { slug: string } }) => {
