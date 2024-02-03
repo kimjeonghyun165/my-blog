@@ -8,7 +8,7 @@ export function MobileMenu({
   return (
     <div className="grid justify-center items-center top-32 mb-12 ">
       <div className="flex flex-col items-center mb-12 px-6">
-        <div className="font-bold text-xl">JH'S BLOG !</div>
+        <div className="font-bold text-xl">JH&apos;S BLOG !</div>
         <p className="text-sm italic">Updates, ideas and resources</p>
       </div>
       <ul className="menu menu-horizontal bg-base-200 rounded-box">

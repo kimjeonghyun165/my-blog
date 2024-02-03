@@ -6,7 +6,7 @@ export function PcPagination({ currentPage }: { currentPage: number }) {
   return (
     <div className="join">
       {Array.from({ length: totalPages }, (_, i) => (
-        <Link href={`/${i + 1}`}>
+        <Link href={`/${i + 1}`} key={i}>
           <input
             className="join-item btn btn-square"
             type="radio"
