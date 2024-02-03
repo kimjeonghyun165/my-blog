@@ -10,37 +10,45 @@ image: https://i.namu.wiki/i/dRCvtORFRHnrZevUHrylGp7nSHffj7An-uZxC017VyzKScUT_9E
 
 ---
 
-**클린룸이란?**
+### About CleanRoom
 
-[Class란]
+**[Class]**
 
-보통 클린룸의 청정도는 Class라는 단위를 이용해서 클린룸 내 공기 중 미립자 수를 특정 크기 범위로 나눈 등급으로 나타냅니다.
-클린룸 Class가 낮을수록 입자 수 제어가 높아지며, 이는 반도체 제조와 같이 미립자에 민감한 작업에서 중요합니다.
+보통 클린룸의 청정도는 Class라는 단위를 이용해서 클린룸 내 공기 중 Particle/Dust 수를 특정 크기 범위로 나눈 등급으로 나타냅니다.
+클린룸 Class가 낮을수록 입자 수 제어가 높아지며, 이는 반도체 제조와 같이 Particle/Dust에 민감한 작업에서 중요합니다.
 
-> 예시 등급:
+> Example
 >
 > - Class 1: 0.1μm 이상의 입자 수가 1개 이하
 > - Class 10: 0.5μm 이상의 입자 수가 10개 이하
 > - Class 100: 0.5μm 이상의 입자 수가 100개 이하
 
-등급이 낮을수록 까다로운 표준을 충족하며, 반도체 제조와 같이 미립자에 민감한 작업에 사용됩니다.
+등급이 낮을수록 까다로운 표준을 충족하며, 반도체 제조와 같이 Particle/Dust에 민감한 작업에 사용됩니다.
 
-**ABOUT IGZO TFT**
+**[방진복]**
+
+클린룸 진입 전 방진복 착용 순서는 다음과 같이 진행되었습니다
+
+> 착용순서 : 장갑 -> 마스크 -> 방진모 -> 방진복 -> 방진화
+
+이후 방진복을 착용한 상태에서 에어샤워를 통해 클린룸에 입실하여 실습을 시작하였습니다.
+
+### About IGZO TFT
 
 ndium Gallium Zinc Oxide Thin Film Transistor (IGZO TFT)는 특수한 소재로 만들어진 박막 트랜지스터로, 현대 전자 기기에서 주로 사용되는 디스플레이 및 반도체 소자 중 하나입니다.
 이러한 TFT는 다양한 기기에서 고해상도 및 높은 성능을 제공하는 특징을 갖고 있습니다.
 
-[소재 (IGZO)]
+**[소재 (IGZO)]**
 
 - IGZO는 인듐(In), 갈륨(Ga), 아연(Zn), 산소(O)로 이루어진 박막 소재입니다.
 - 해당 소재는 안정성이 뛰어나며, 고전자 이동도를 제공하여 전류의 효율적인 흐름을 가능케하는 장점이 있습니다.
 
-[제조 과정]
+**[제조 과정]**
 
-> Gate Photo -> Gate Metal 증착 -> Lift Off -> Gate Inuslator Deposition -> IGZO 증착 -> Channel Photo
-> -> Wet Etching -> Annealing -> S/D Photo -> S/D Metal 증착 -> Lift Off -> Gate Open -> Wet Etching -> EDS
+> Gate Photo -> Gate Metal Deposition -> Lift Off -> Gate Inuslator Deposition -> IGZO Deposition -> Channel Photo
+> -> Wet Etching -> Annealing -> S/D Photo -> S/D Metal Deposition -> Lift Off -> Gate Open -> Wet Etching -> EDS
 
-[동작 원리]
+**[동작 원리]**
 
 - IGZO가 트렌지스터 구조에서 차지하는 영역을 Actice Layer로 정의.
 - Source와 Drain사이에 Channel을 생성해 전자를 이동시켜 전류를 발생.
@@ -50,30 +58,64 @@ IGZO TFT는 고해상도 디스플레이뿐만 아니라 태양전지 패널, �
 특히, 디스플레이 분야에서는 고밀도 및 고해상도 디바이스에서 뛰어난 성능을 발휘합니다.
 IGZO TFT는 현대 전자 기기의 핵심 소자로서, 안정성과 고성능을 결합하여 다양한 응용 분야에서 중요한 역할을 수행하고 있습니다.
 
-## 실습과정
+## TFT 공정실습
 
 ---
 
-**Gate Photo**
+**[Gate Photo]**
 ![img](/posts/post-02/photo_spin_bake.png)
 포토 공정은 반도체 제조 공정 중에서 미세한 패턴을 형성하기 위해 빛을 사용하는 공정을 일컫습니다.
 이러한 포토 공정은 노광 및 포토레지스트 기술을 사용하여 반도체 칩 내의 다양한 소자들을 정의하고 형성하는 데 사용됩니다.
-해당 실습과정에서는 첫번째로 Gate를 형성시켜야 하므로 특정 위치에 패터닝하는 작업을 진행합니다.
+해당 실습과정에서는 첫번째로 Gate를 형성시켜야 하므로 특정 위치에 패터닝하는 작업을 진행합니다. (Negative PR)
 
-> PR 도포 -> Spin Coating -> Soft Bake -> 정렬 및 노광 -> PEB -> 현상 -> HardBake -> 패턴확인
+> PR 도포 -> Spin Coating -> Soft Bake -> 정렬 및 노광 -> PEB -> 현상 -> HardBake -> 검사
 
-**Gate Metal 증착**
+**[Gate Metal Deposition]**
 ![img](/posts/post-02/deposition_ebeam.png)
-E-beam 증착 방식을 활용하여 metal을 증착시킵니다. adhesion 향상을 위해 먼저 Ti를 증착 후 Cu를 증착시킵니다.
+E-beam 증착 방식을 활용하여 metal을 증착시킵니다. Adhesion 향상을 위해 먼저 Ti를 증착 후 Cu를 증착시킵니다.
 E-Beam Evaporation은 박막 증착 기술 중 하나로, 고진공 환경에서 진행이 되며 전자빔을 이용하여 물질을 가열하여 증발시키고 그 증발된 물질을 타겟에 증착시키는 공정입니다.
 보통 얇은 박막을 증착시키는데 사용 되는 공정 중 하나입니다.
 
-**S/D Photo and Metal 증착**
-이제 Source와 Drain 패턴을 위해 2차 포토공정을 진행합니다. 이전 1차 Gate 포토에서는 조교님들이 진행하였지만 이번에는 직접 실습할 수 있는 기회를 가지게 되었습니다.
-1차와 과정이 동일하여 metal 증착 또한 gate metal 증착과정과 비슷하게 E-beam 증착 방식을 이용하여 박막을 형성하였습니다.
+**[Lift Off]**
 
-**EDS**
+이번 실습과정에서는 Lift Off 공정 방식을 이용하였습니다.
+해당 공정은 반도체 제조 및 나노패턴 형성 공정에서 사용되는 중요한 단계 중 하나입니다.
+
+> 포토 공정 -> 박막 증착 -> PR 제거
+
+해당 고정은 식각공정을 통한 패터닝 방식과는 다르게 식각공정이 없어 공정이 매우 간결합니다.
+또한 박막 표면 손상이 거의 없다는 점에서 큰 장점을 가지고 있습니다.
+다만 위와 같은 장점에도 불고하고 미세한 공정을 진행할 때는 매우 치명적인 단점을 가지고 있습니다.
+두꺼운 PR을 요구하여 두께가 매우 크며 Negative PR이 필수적으로 요구되는데 이는 미세한 패터닝이 어렵다는 단점이 있습니다.
+
+**[Gate Inuslator Deposition]**
+![img](/posts/post-02/deposition_ald.png)
+해당 공정에서는 ALD 증착방식을 이용하여 Gate Insulator을 증착시킵니다.
+ALD는 나노 레벨의 박막을 매우 정밀하게 증착하는 데 사용되는 증착 기술 중 하나이며 이전 증착 방식들(sputtering, E-beam, PECVD...)의 단점을 보완한 방식입니다.
+ALD는 기체 상태의 선구체 분자를 순서대로 표면에 증착하여 원하는 두께와 특성의 박막을 천천히 형성합니다.
+원자 단위 수준에서 제어하는 만큼 박막의 퀄리티가 매우 높으며 얇은 박막을 형성하는데 유리합니다. 또한 step-coverage 측면에서 유리하다는 장점이 있습니다.
+다만 속도, 생산성, 비용적인 측면에서 제약을 가지고 있습니다.
+
+**[IGZO 증착 ~ Annealing]**
+![img](/posts/post-02/deposition_sputtering.png)
+해당 공정에서는 sputtering 증착방식을 이용하여 IGZO를 증착시킬 것입니다.
+기판을 진공 챔버에 고정시키고, IGZO 타겟은 고에너지 이온 충돌을 통해 소자의 표면에 증착됩니다.
+고에너지 이온의 충돌은 타겟에서 원소들을 떨어뜨려 기판 표면에 증착되게 하며, 원소들이 결합하여 IGZO 박막이 형성됩니다.
+해당 공정에서 sputtering을 사용한 이유는 다음과 같습니다.
+
+- Sputtering은 고온이 필요하지 않아 박막의 높은 결정도를 제공
+- 증착 과정에서 원소의 비율을 조절할 수 있어, IGZO의 특성을 원하는 대로 조절 가능
+- 증착된 IGZO 박막은 우수한 전자 이동도와 광학적 투명성을 제공
+
+위 과정이 끝난 후 wet Etching을 진행 후 안정화를 위해 고온에서 Annealing을 진행시킵니다.
+
+**[S/D Photo and Metal Deposition]**
+
+이제 Source와 Drain 패턴을 위해 2차 포토공정을 진행합니다. 이전 1차 Gate 포토에서는 조교님들이 진행하였지만 이번에는 직접 실습할 수 있는 기회를 가지게 되었습니다.
+Metal(Ti/Cu) 증착 또한 gate metal 증착과정과 비슷하게 E-beam 증착 방식을 이용하여 박막을 형성하였습니다. 그 후 Lift Off에 따라 PR을 제거 해줍니다.
+
+**[EDS]**
 ![img](/posts/post-02/EDS.png)
 최종적으로 사진과 같이 위 장비를 활용하여 정상적으로 작동하는지 확인합니다. 3개의 핀을 Gate, Source, Drain에 고정 시킨 후 정상적으로 동작하는지 확인합니다.
 
-## 마무리
+## TCAD 툴을 활용한 P-N 다이오드 모델링과 측정
