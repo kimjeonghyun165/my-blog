@@ -11,28 +11,22 @@ export function MegaMenu(props: DrawerProps) {
   let router = useRouter();
   return (
     <ul className="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
-      <li>
-        {props.contents.map((content: any, index: number) => {
-          return (
-            <>
-              <a>{content.mainText}</a>
-              <ul>
-                {content.subText.map((item: ListContent, index: number) => {
-                  return (
-                    <a className="max-w-fit">
-                      {content.type === "theme" ? (
-                        <ThemeBtn index={index} item={item} router={router} />
-                      ) : (
-                        <LinkBtn index={index} item={item} router={router} />
-                      )}
-                    </a>
-                  );
-                })}
-              </ul>
-            </>
-          );
-        })}
-      </li>
+      {props.contents.map((content: any, index: number) => (
+        <li key={index}>
+          <a>{content.mainText}</a>
+          <ul>
+            {content.subText.map((item: ListContent, subIndex: number) => (
+              <li key={subIndex} className="max-w-fit">
+                {content.type === "theme" ? (
+                  <ThemeBtn index={subIndex} item={item} router={router} />
+                ) : (
+                  <LinkBtn index={subIndex} item={item} router={router} />
+                )}
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
     </ul>
   );
 }
