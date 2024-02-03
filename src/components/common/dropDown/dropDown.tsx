@@ -25,9 +25,9 @@ export function Dropdown({ type, buttonText, listContent }: DropdownForm) {
       >
         {listContent.map((item, index) =>
           type === "theme" ? (
-            <ThemeBtn index={index} item={item} router={router} />
+            <ThemeBtn key={index} index={index} item={item} router={router} />
           ) : (
-            <LinkBtn index={index} item={item} router={router} />
+            <LinkBtn key={index} index={index} item={item} router={router} />
           )
         )}
       </ul>
