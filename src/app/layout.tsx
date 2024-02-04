@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "게으른 공대생의 노트",
   description: "꿈은 없고요, 그냥 누워서 지내고 싶습니다.",
-  openGraph: { images: "/images/og-image.jpeg" },
+  openGraph: {
+    images: [{ url: "/images/og-image.jpeg" }],
+  },
 };
 
 export default function RootLayout({
