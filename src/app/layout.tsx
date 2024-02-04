@@ -8,8 +8,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "대학생의 블로그",
-  description: "대학생의 반도체/개발 스택 블로그",
+  title: "게으른 공대생의 노트",
+  description: "꿈은 없고요, 그냥 누워서 지내고 싶습니다.",
 };
 
 export default function RootLayout({
