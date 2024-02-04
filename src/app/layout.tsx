@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "게으른 공대생의 노트",
     description: "꿈은 없구요, 그냥 놀고싶습니다.",
-    images:
-      "https://post-phinf.pstatic.net/MjAyMTAzMDFfMzAw/MDAxNjE0NTc2OTU4MzM1.wk1uzUpKSr2p37pAU9CDUGZTEygyyiRq8sv22JRwnCgg.DcACc2bhwleN44O1s_R9htnARyUn4-D_c4QacNaqX2Eg.JPEG/IMG_0462.jpg?type=w800_q75",
+    images: "/images/og-image.png",
   },
 };
 
