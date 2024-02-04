@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "게으른 공대생의 노트",
-    description: "꿈은 없고요, 그냥 누워서 지내고 싶습니다.",
-    images: [{ url: "/images/og-image.png" }],
+    description: "꿈은 없구요, 그냥 놀고싶습니다.",
+    images: "/images/og-image.png",
   },
 };
 
