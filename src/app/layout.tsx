@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "게으른 공대생의 노트",
     description: "꿈은 없고요, 그냥 누워서 지내고 싶습니다.",
-    images: [{ url: "/images/og-image.jpeg" }],
+    images: [{ url: "/images/og-image.png" }],
   },
 };
 
