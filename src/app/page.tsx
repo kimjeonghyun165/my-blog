@@ -4,12 +4,9 @@ import { Pagination } from "@/components/common/pagination/pagination";
 import { Layout } from "@/components/layout/Layouts";
 import { posts } from "@/constants/posts";
 import { usePage } from "@/hooks/usePage";
-import { useParams, useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
   const currentPosts = usePage(posts, 5, 1);
-  //   router.push("1");
   return (
     <Layout>
       <div className="w-full mx-auto max-w-2xl">
